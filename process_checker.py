@@ -34,7 +34,7 @@ def check_processes(data_list):
             if(p.running == False):
                 p.open()
 
-        time.sleep(5.0)
+        time.sleep(refresh_rate)
 
 def main():
     # open json file
