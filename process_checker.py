@@ -26,7 +26,7 @@ def check_processes(data_list):
         # check if processes are running
         for proc in psutil.process_iter():
             for p in processes:
-                if proc.name() == p.name:
+                if proc.name().lower() == p.name.lower:
                     p.running = True
 
         # open all processes that are running

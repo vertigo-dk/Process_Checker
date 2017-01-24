@@ -1,8 +1,5 @@
-[{
-    "process_name": "Mail",
-    "app_location": "/Applications/Mail.app"
-}, {
-    "process_name": "TextEdit",
+[ {
+    "process_name": "textedit",
     "app_location": "/Applications/TextEdit.app"
 }, {
     "process_name": "Preview",
