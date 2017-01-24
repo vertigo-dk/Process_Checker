@@ -5,3 +5,4 @@ General purpose of process_checker as used in Sukkerkor_Watchdog and Wave_Proces
 
 #### To-do:
 * Loop of processes could be more efficient.
+* Process comparison is case-sensitive

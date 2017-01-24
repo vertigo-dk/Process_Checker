@@ -4,21 +4,23 @@ __author__ = 'frederikjuutilainen'
 import threading, time, json, psutil, os
 
 class Process:
-    def __init__(self, name):
+    def __init__(self, name, location):
         self.name = name
+        self.location = location
         self.running = False
+
+    def open(self):
+        os.system('open ' + self.location)
+        print('open ' + self.location)
 
 def check_processes(data_list):
     processes = []
     # create list of Process from data_list
-    for p_name in data_list["processes"]:
-        p = Process(p_name)
+    for entry in data_list:
+        p = Process(entry["process_name"],entry["app_location"])
         processes.append(p)
 
     while True:
-        # kill unresponsive
-        os.system('sudo ./killunresponsive/killunresponsive')
-
         # check if processes are running
         for proc in psutil.process_iter():
             for p in processes:
@@ -28,8 +30,7 @@ def check_processes(data_list):
         # open all processes that are running
         for p in processes:
             if(p.running == False):
-                print(p.name + " not running")
-
+                p.open()
 
         time.sleep(5.0)
 
