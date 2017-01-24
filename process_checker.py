@@ -3,6 +3,8 @@ __author__ = 'frederikjuutilainen'
 
 import threading, time, json, psutil, os
 
+refresh_rate = 5.0 # time between checks
+
 class Process:
     def __init__(self, name, location):
         self.name = name
@@ -35,6 +37,7 @@ def check_processes(data_list):
         time.sleep(5.0)
 
 def main():
+    # open json file
     with open('process_list.json', encoding='utf-8') as data_file:
         data = json.loads(data_file.read())
     t = threading.Timer(1.0, check_processes(data))
