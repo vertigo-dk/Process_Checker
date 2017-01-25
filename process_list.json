@@ -2,6 +2,6 @@
     "process_name": "textedit",
     "app_location": "/Applications/TextEdit.app"
 }, {
-    "process_name": "Preview",
-    "app_location": "/Applications/Preview.app"
+    "process_name": "Safari",
+    "app_location": "/Applications/Safari.app"
 }]
