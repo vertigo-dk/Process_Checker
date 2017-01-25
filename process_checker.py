@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 __author__ = 'frederikjuutilainen'
 
-import threading, time, json, psutil, os
+import threading, time, json, psutil, os, sys
 
 refresh_rate = 5.0 # time between checks
 
@@ -26,7 +26,8 @@ def check_processes(data_list):
         # check if processes are running
         for proc in psutil.process_iter():
             for p in processes:
-                if proc.name().lower() == p.name.lower:
+                if proc.name().lower() == p.name.lower():
+                    print(p.name)
                     p.running = True
 
         # open all processes that are running
