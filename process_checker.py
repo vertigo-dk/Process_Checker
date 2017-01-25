@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 __author__ = 'frederikjuutilainen'
 
-import threading, time, json, psutil, os, sys
+import threading, time, json, psutil, os
 
 refresh_rate = 5.0 # time between checks
 
