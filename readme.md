@@ -6,8 +6,26 @@ General purpose of process_checker as used in Sukkerkor_Watchdog and Wave_Proces
 ### Setup
 Created using python3 in a virtualenv. Create a new virtualenv and install dependencies using pip:
 
+Setup a virtualenv using python3:
+
+```
+virtualenv -p python3 venv
+```
+
+Activate virtualenv:
+```
+source venv/bin/activate
+
+```
+Install requirements:
+
 ```
 $ pip install -r requirements.txt
+```
+Run script:
+```
+python process_checker.py
+
 ```
 
 #### To-do:

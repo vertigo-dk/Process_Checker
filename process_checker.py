@@ -33,6 +33,7 @@ def check_processes(data_list):
         for p in processes:
             if(p.running == False):
                 p.open()
+            p.running = False
 
         time.sleep(refresh_rate)
 
